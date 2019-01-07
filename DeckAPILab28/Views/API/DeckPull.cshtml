@@ -1,0 +1,11 @@
+﻿<table class="table">
+    <tr>
+        @for (int i = 0; i < ViewBag.Cards.Count; i++)
+        {
+            <td><img src="@ViewBag.Cards[i]["image"]" /></td>
+        }
+    </tr>
+</table>
+<form action="~/API/DeckPull" method="post">
+    <input type="submit" value="Get New Cards" class="btn-lg"/>
+</form>
